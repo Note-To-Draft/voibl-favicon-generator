@@ -7,6 +7,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from config import Config
 from dotenv import load_dotenv
+from werkzeug.utils import secure_filename
 
 # Load environment variables from .env file
 load_dotenv()
@@ -47,7 +48,8 @@ def terms():
 
 @app.route('/favicon/<path:filename>')
 def serve_favicon(filename):
-    filepath = os.path.join('/home/tmnotetodraft/voibl/static', filename)
+    secure_name = secure_filename(filename)
+    filepath = os.path.join('/home/tmnotetodraft/voibl/static', secure_name)
     if os.path.exists(filepath):
         return send_file(filepath)
     else:
@@ -102,3 +104,5 @@ def upload():
 
     return redirect(url_for('success', favicon_path=favicon_url))
 
+if __name__ == '__main__':
+    app.run(debug=True)
