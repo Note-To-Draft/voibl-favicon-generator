@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cropper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="https://voibl.com/favicon/static/19030101402602277434/favicon.ico">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container mt-5">
+        <h1 class="text-center">Crop and Upload Image</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="upload-image" class="btn btn-primary btn-block">Choose Image</label>
+                    <input type="file" id="upload-image" accept="image/*" class="form-control-file" style="display: none;">
+                </div>
+                <div class="text-center">
+                    <img id="image" style="display: none; max-width: 100%;" class="img-fluid mt-3">
+                </div>
+                <button id="crop-button" class="btn btn-success btn-block mt-3">Crop and Upload Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('upload-image').addEventListener('change', function (event) {
+        const image = document.getElementById('image');
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            image.src = e.target.result;
+            image.style.display = 'block';
+
+            // Initialize Cropper.js
+            const cropper = new Cropper(image, {
+                aspectRatio: 1, // Lock aspect ratio to 1:1
+                viewMode: 1,
+                autoCropArea: 1,
+                responsive: true,
+                background: false
+            });
+
+            document.getElementById('crop-button').addEventListener('click', function () {
+                const croppedCanvas = cropper.getCroppedCanvas();
+                croppedCanvas.toBlob(function (blob) {
+                    const formData = new FormData();
+                    formData.append('cropped_image', blob, 'cropped.png');
+
+                    fetch('/upload', {
+                        method: 'POST',
+                        body: formData,
+                    }).then(response => {
+                        if (response.redirected) {
+                            window.location.href = response.url;
+                        }
+                    }).catch(error => {
+                        console.error('Error:', error);
+                    });
+                });
+            });
+        };
+
+        reader.readAsDataURL(file);
+    });
+    </script>
+</body>
+</html>

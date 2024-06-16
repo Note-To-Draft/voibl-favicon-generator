@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="https://voibl.com/favicon/static/19030101402602277434/favicon.ico">
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="container mt-5">
+    <div class="alert alert-success text-center">
+        <h1>Success!</h1>
+        <p>Your image has been successfully uploaded and processed.</p>
+    </div>
+    {% if favicon_path %}
+    <div class="alert alert-info text-center">
+        <h2>Use this HTML link tag to include your favicon:</h2>
+        <code>&lt;link rel="icon" href="https://voibl.com/favicon/{{ favicon_path }}"&gt;</code>
+    </div>
+    <div class="text-center mt-3">
+        <a href="https://voibl.com" class="btn btn-link">Powered by Voibl Software</a>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

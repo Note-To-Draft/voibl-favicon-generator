@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    
+
+    <link rel="icon" href="https://voibl.com/favicon/static/19030101402602277434/favicon.ico">
+
+    <title>Voibl</title>
+</head>
+
+<body>
+{% include 'navbar.html' %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-8">
+            <div class="card border-primary mb-4">
+                <div class="card-body">
+                    
+                    <div class="row ml-0 mr-0">
+                        <div class="col-12 px-4 w-100">
+                            <h3 class="text-primary text-center">Terms of Use Agreement</h3>
+                            <p class="lead p-4">
+                                This Terms of Use Agreement (this “Agreement”) and all terms and conditions of use provided herein (the “Terms”) apply to the use of any website, platform, system, or services (collectively the “Platform”) that is provided, owned, or operated by Note to Draft, LLC (“Company”).  By using, accessing, or signing up for the Platform, you agree to abide by the terms and conditions of this Agreement, which may be modified from time to time by us.
+                            </p>
+                            <p class="lead p-4">
+                                Company will post a notice on the Platform any time this Agreement has been changed or otherwise updated. It is your responsibility to review this Agreement periodically, and if at any time you find this Agreement unacceptable, you must immediately leave the Platform and cease all use of the Service and the Platform. YOU AGREE THAT BY USING THE PLATFORM YOU REPRESENT THAT YOU ARE AT LEAST 18 YEARS OLD AND THAT YOU ARE LEGALLY ABLE TO ENTER INTO THIS AGREEMENT.
+                            </p>
+                            <p class="lead p-4">
+                                PRIVACY POLICY. We have built our Platforms with privacy in mind and are consistently taking steps through out feature the development process to work toward providing you with transparency and control over your personal information. To find our more about our privacy practices see our <a href="{{ url_for('privacy') }}" class="text-primary">Privacy Policy</a>.
+                            </p>
+                            <p class="lead p-4">
+                                ACCOUNT AND REGISTRATION. When you are required to open an account to use or access the Platform, you must complete the registration process by providing the complete and accurate information requested on the registration form. You will also be asked to provide a user name and password. You are entirely responsible for maintaining the confidentiality of your password. You may not use the account, username, or password of someone else at any time. You agree to notify Company immediately on any unauthorized use of your account, user name, or password. Company shall not be liable for any loss that you incur as a result of someone else using your password, either with or without your knowledge. You may be held liable for any losses incurred by Company, its affiliates, officers, directors, employees, consultants, agents, and representatives due to someone else’s use of your account or password.
+                            </p>
+                            <p class="lead p-4">
+                                ACCESS RIGHTS. As a visitor of any website owned or operated by Company we hereby grant you the limited, nontransferable, nonsublicensable, revocable right to access the public portions of the website that do not require the creation of an account or registration to the Platform.  You may not sell, redistribute, or reproduce the Software, nor may you decompile, reverse-engineer, disassemble, or otherwise convert the Software to a human-perceivable form. All designs, text, data, workflows, images, media, source code, object code, markup, documentation, trademarks, logos, proprietary or inventive assets, confidential or trade secret materials, and all intellectual property rights therein, including all rights in patents and patent applications, trademarks and trademark applications, copyrights and copyright applications, and confidential and trade secret materials (collectively “Intellectual Property Rights”), are owned by Company or its licensors and you may not copy or use them in any manner.
+                                </p>
+                            <p class="lead p-4">
+                                USER CONTENT. You grant Company a license to use the materials you post to the Platform. By posting, downloading, displaying, performing, transmitting, or otherwise distributing information or other content (“User Content”) to the Platform, you are granting Company, its affiliates, officers, directors, employees, consultants, agents, and representatives a license to use User Content in connection with the operation of the Platform and the Company, its affiliates, officers, directors, employees, consultants, agents, and representatives, including without limitation, a right to copy, distribute, transmit, publicly display, publicly perform, reproduce, edit, translate, and reformat User Content. You will not be compensated for any User Content. You agree that Company may publish or otherwise disclose your name in connection with your User Content. By posting User Content on the Platform, you warrant and represent that you own the rights to the User Content or are otherwise authorized to post, distribute, display, perform, transmit, or otherwise distribute User Content.
+                            </p>
+                            <p class="lead p-4">
+                                COMPLIANCE WITH INTELLECTUAL PROPERTY LAWS. When accessing the Platform or using the Service, you agree to obey the law and to respect the intellectual property rights of others. Your use of the Platform is at all times governed by and subject to laws regarding copyright ownership and use of intellectual property. You agree not to upload, download, display, perform, transmit, train artificial intelligence models upon, or otherwise distribute any information or content (collectively, “Content”) in violation of any third party’s copyrights, trademarks, or other intellectual property or proprietary rights. You agree to abide by laws regarding copyright ownership and use of intellectual property, and you shall be solely responsible for any violations of any relevant laws and for any infringements of third party rights caused by any Content you provide or transmit. The burden of proving that any Content does not violate any laws or third party rights rests solely with you.
+                            </p>
+                            <p class="lead p-4">
+                                INAPPROPRIATE CONTENT. You shall not make the following types of Content available. You agree not to upload, download, display, perform, transmit, or otherwise distribute any Content that (a) is libelous, defamatory, obscene, pornographic, abusive, or threatening; (b) advocates or encourages conduct that could constitute a criminal offense, give rise to civil liability, or otherwise violate any applicable local, state, national, or foreign law or regulation; or (c) advertises or otherwise solicits funds or is a solicitation for goods or services. Company reserves the right to terminate your receipt, transmission, or other distribution of any such material using the Platform, and, if applicable, to delete any such material from its servers. Company intends to cooperate fully with any law enforcement officials or agencies in the investigation of any violation of this Agreement or of any applicable laws.
+                            </p>
+                            <p class="lead p-4">
+                                ALLEGED VIOLATIONS. Company reserves the right to terminate your use of the Service and/or the Platform. To ensure that Company provides a high quality experience for you and for other users of the Platform and the Service, you agree that Company or its representatives may access your account and records on a case-by-case basis to investigate complaints or allegations of abuse, infringement of third party rights, or other unauthorized uses of the Platform. Company does not intend to disclose the existence or occurrence of such an investigation unless required by law, but Company reserves the right to terminate your account or your access to the Platform immediately, with or without notice to you, and without liability to you, if Company believes that you have violated any of the Terms of this Agreement, furnished Company with false or misleading information, or interfered with use of the Platform or the Service by others.
+                            </p>
+                            <p class="lead p-4">
+                                NO WARRANTIES. COMPANY HEREBY DISCLAIMS ALL WARRANTIES. COMPANY IS MAKING THE PLATFORM AVAILABLE “AS IS” WITHOUT WARRANTY OF ANY KIND. YOU ASSUME THE RISK OF ANY AND ALL DAMAGE OR LOSS FROM USE OF, OR INABILITY TO USE, THE SITE OR THE SERVICE. TO THE MAXIMUM EXTENT PERMITTED BY LAW, COMPANY EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE SITE, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. COMPANY DOES NOT WARRANT THAT THE SITE OR THE SERVICE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE SITE OR THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE.
+                            </p>
+                            <p class="lead p-4">
+                                LIMITED LIABILITY. COMPANY’S LIABILITY TO YOU IS LIMITED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL COMPANY BE LIABLE FOR DAMAGES OF ANY KIND (INCLUDING, BUT NOT LIMITED TO, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, LOST PROFITS, OR LOST DATA, REGARDLESS OF THE FORESEEABILITY OF THOSE DAMAGES) ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SITE OR ANY OTHER MATERIALS OR SERVICES PROVIDED TO YOU BY COMPANY. This limitation shall apply regardless of whether the damages arise out of breach of contract, tort, or any other legal theory or form of action.
+                            </p>
+                            <p class="lead p-4">
+                                AFFILIATED SITES. Company has no control over, and no liability for any third party websites or materials. Company may work with a number of partners and affiliates whose Internet sites may be linked with the Platform. Because neither Company nor the Platform has control over the content and performance of these partner and affiliate sites, Company makes no guarantees about the accuracy, currency, content, or quality of the information provided by such sites, and Company assumes no responsibility for unintended, objectionable, inaccurate, misleading, or unlawful content that may reside on those sites. Similarly, from time to time in connection with your use of the Platform, you may have access to content items (including, but not limited to, websites) that are owned by third parties. You acknowledge and agree that Company makes no guarantees about, and assumes no responsibility for, the accuracy, currency, content, or quality of this third party content, and that, unless expressly provided otherwise, this Agreement shall govern your use of any and all third party content.
+                            </p>
+                            <p class="lead p-4">
+                                PROHIBITED USES. Company imposes certain restrictions on your permissible use of the Platform and the Service. You are prohibited from violating or attempting to violate any security features of the Platform, including, without limitation, (a) accessing content or data not intended for you, or logging onto a server or account that you are not authorized to access; (b) attempting to probe, scan, or test the vulnerability of the Platform, or any associated system or network, or to breach security or authentication measures without proper authorization; (c) interfering or attempting to interfere with service to any user, host, or network, including, without limitation, by means of submitting a virus to the Platform, overloading, “flooding,” “spamming,” “mail bombing,” or “crashing;” (d) using the Platform to send unsolicited e-mail, including, without limitation, promotions, or advertisements for products or services; (e) forging any TCP/IP packet header or any part of the header information in any e-mail or in any posting using the Service; or (f) attempting to modify, reverse-engineer, decompile, disassemble, or otherwise reduce or attempt to reduce to a human-perceivable form any of the source code used by Company in providing the Platform; or (g) using any content, text, media, documentation, comments, or other elements or materials of the Platform for model or artificial intelligence training purposes. Any violation of system or network security may subject you to civil and/or criminal liability.
+                            </p>
+                            <p class="lead p-4">
+                                INDEMNITY. You agree to indemnify Company for certain of your acts and omissions. You agree to indemnify, defend, and hold harmless Company, its affiliates, officers, directors, employees, consultants, agents, and representatives from any and all third party claims, losses, liability, damages, and/or costs (including reasonable attorney fees and costs) arising from your access to or use of the Platform, your violation of this Agreement, or your infringement, or infringement by any other user of your account, of any intellectual property or other right of any person or entity. Company will notify you promptly of any such claim, loss, liability, or demand, and will provide you with reasonable assistance, at your expense, in defending any such claim, loss, liability, damage, or cost.
+                            </p>
+                            <p class="lead p-4">
+                                OWNERSHIP AND INTELLECTUAL PROPERTY. All contents of Platform and Intellectual Property Rights therein are owned by the Company.  Nothing herein shall constitute any grant or assignment of any right, title, or interest in or to any Intellectual Property Rights of Company or Platform to you.  Company retains all Intellectual Property Rights in the Platform and reserves all right to apply for any patents, copyrights, trademarks, in the United States or throughout the World relating to the Company’s Intellectual Property Rights and the Platform.
+                            </p>
+                            <p class="lead p-4">
+                                FEEDBACK. To the extent you provides Company with any suggestions, ideas, enhancement requests, recommendations, or feedback relating to the Platform (collectively, “Feedback”), you hereby grants to Company a fully paid-up, royalty-free, worldwide, irrevocable, perpetual license to use or incorporate the Feedback into the Platform and any other products or services of Company.  To the extent Company incorporates any Feedback into the Platform or any other such products or services (the “Incorporated Feedback”) you hereby acknowledge and agree that you shall have no right, title, or interest in and to the Incorporated Feedback and to the extent any aspect of the Incorporated Feedback is deemed to be owned by you, you hereby assign all right, title, and interest in and to such Incorporated Feedback and any intellectual property rights therein to Company.
+                            </p>
+                            <p class="lead p-4">
+                                GOVERNING LAW. This Agreement shall be construed in accordance with and governed by the laws of the United States and the State of California, without reference to their rules regarding conflicts of law. You hereby irrevocably consent to the exclusive jurisdiction of the state or federal courts in Orange County, California, in all disputes arising out of or related to the use of the Platform.
+                            </p>
+                            <p class="lead p-4">
+                                EVERABILITY; WAIVER. If, for whatever reason, a court of competent jurisdiction finds any term or condition in this Agreement to be unenforceable, all other terms and conditions will remain unaffected and in full force and effect. No waiver of any breach of any provision of this Agreement shall constitute a waiver of any prior, concurrent, or subsequent breach of the same or any other provisions hereof, and no waiver shall be effective unless made in writing and signed by an authorized representative of the waiving party.
+                            </p>
+                            <p class="lead p-4">
+                                NO LICENSE. Nothing contained on the Platform should be understood as granting you a license to use any of the trademarks, service marks, or logos owned by Company or by any third party.
+                            </p>
+                            <p class="lead p-4">
+                                CALIFORNIA USE ONLY. The Platform is controlled and operated by Company from its offices in the State of California. Company makes no representation that any of the materials or the services to which you have been given access are available or appropriate for use in other locations. Your use of or access to the Platform should not be construed as Company’s purposefully availing itself of the benefits or privilege of doing business in any state or jurisdiction other than California.
+                            </p>
+                            <p class="lead p-4">
+                                MODIFICATIONS. Company may, in its sole discretion and without prior notice, (a) revise this Agreement; (b) modify the Platform; and (c) discontinue the Platform at any time. Company shall post any revision to this Agreement to the Platform, and the revision shall be effective immediately on such posting. You agree to review this Agreement and other online policies posted on the Platform periodically to be aware of any revisions. You agree that, by continuing to use or access the Platform following notice of any revision, you shall abide by any such revision.
+                            </p>
+                            <p class="lead p-4">
+                                ACKNOWLEDGEMENT. BY USING THE SERVICE OR ACCESSING THE SITE, YOU ACKNOWLEDGE THAT YOU HAVE READ ALL TERMS AND CONDITIONS OF THIS AGREEMENT AND AGREE TO BE BOUND BY THEM.
+                            </p>
+                           
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
